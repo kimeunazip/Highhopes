@@ -1,13 +1,13 @@
-package com.dentalLab.ERPproject;
+package com.dentbill;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ErPprojectApplication {
+public class DentbillProjectApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ErPprojectApplication.class, args);
+		SpringApplication.run(DentbillProjectApplication.class, args);
 	}
 
 }

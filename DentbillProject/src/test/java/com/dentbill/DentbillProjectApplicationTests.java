@@ -1,10 +1,10 @@
-package com.dentalLab.ERPproject;
+package com.dentbill;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ErPprojectApplicationTests {
+class DentbillProjectApplicationTests {
 
 	@Test
 	void contextLoads() {
