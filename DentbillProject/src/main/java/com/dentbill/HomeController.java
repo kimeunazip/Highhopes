@@ -1,4 +1,4 @@
-package com.dentbill.controller;
+package com.dentbill;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
