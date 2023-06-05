@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode(callSuper = false)
 public class BusinessPartnerVO {
 	//거래처아이디,거래처명,거래처유형
-	private String partnerId="";
-	private String partnerName="";
-	private String partnerType="";
+	private String partner_id="";
+	private String partner_name="";
+	private String partner_type="";
 }

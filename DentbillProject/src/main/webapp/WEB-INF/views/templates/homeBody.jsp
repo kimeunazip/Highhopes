@@ -6,7 +6,7 @@
 		        <div class="container-fluid">
 		        	   <!-- 당일 거래 통계  -->
 		            <div class="row">
-		                <!-- 1. 오늘 접수 명단 -->
+		                <!-- 1. 오늘 접수 명단 -보철별 -->
 		                <div class="col-lg-12 d-flex align-items-stretch">
 		                    <div class="card w-100">
 		                        <div class="card-body p-4">
@@ -33,7 +33,92 @@
 		                                    <tr>
 		                                        <td class="border-bottom-0"><h6 class="fw-semibold mb-0">1</h6></td>
 		                                        <td class="border-bottom-0">
-		                                            <h6 class="fw-semibold mb-1">Sunil Joshi</h6>
+		                                            <h6 class="fw-semibold mb-1">Elite Admin</h6>
+		                                            <span class="fw-normal">Web Designer</span>
+		                                        </td>
+		                                        <td class="border-bottom-0">
+		                                            <p class="mb-0 fw-normal">Elite Admin</p>
+		                                        </td>
+		                                        <td class="border-bottom-0">
+		                                            <h6 class="fw-semibold mb-0 fs-4">$3.9</h6>
+		                                        </td>
+		                                    </tr>
+		                                    <tr>
+		                                        <td class="border-bottom-0"><h6 class="fw-semibold mb-0">2</h6></td>
+		                                        <td class="border-bottom-0">
+		                                            <h6 class="fw-semibold mb-1">Andrew McDownland</h6>
+		                                            <span class="fw-normal">Project Manager</span>
+		                                        </td>
+		                                        <td class="border-bottom-0">
+		                                            <p class="mb-0 fw-normal">Real Homes WP Theme</p>
+		                                        </td>
+		                                        <td class="border-bottom-0">
+		                                            <h6 class="fw-semibold mb-0 fs-4">$24.5k</h6>
+		                                        </td>
+		                                    </tr>
+		                                    <tr>
+		                                        <td class="border-bottom-0"><h6 class="fw-semibold mb-0">3</h6></td>
+		                                        <td class="border-bottom-0">
+		                                            <h6 class="fw-semibold mb-1">Christopher Jamil</h6>
+		                                            <span class="fw-normal">Project Manager</span>
+		                                        </td>
+		                                        <td class="border-bottom-0">
+		                                            <p class="mb-0 fw-normal">MedicalPro WP Theme</p>
+		                                        </td>
+		                                        <td class="border-bottom-0">
+		                                            <h6 class="fw-semibold mb-0 fs-4">$12.8k</h6>
+		                                        </td>
+		                                    </tr>
+		                                    <tr>
+		                                        <td class="border-bottom-0"><h6 class="fw-semibold mb-0">4</h6></td>
+		                                        <td class="border-bottom-0">
+		                                            <h6 class="fw-semibold mb-1">Nirav Joshi</h6>
+		                                            <span class="fw-normal">Frontend Engineer</span>
+		                                        </td>
+		                                        <td class="border-bottom-0">
+		                                            <p class="mb-0 fw-normal">Hosting Press HTML</p>
+		                                        </td>
+		                                        <td class="border-bottom-0">
+		                                            <h6 class="fw-semibold mb-0 fs-4">$2.4k</h6>
+		                                        </td>
+		                                    </tr>
+		                                    </tbody>
+		                                </table>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </div>
+		                 <!-- 2. 오늘 접수 명단 - 치과별 -->
+		                <div class="col-lg-12 d-flex align-items-stretch">
+		                    <div class="card w-100">
+		                        <div class="card-body p-4">
+		                            <h5 class="card-title fw-semibold mb-4">Today`s Transactions<span style="font-size: 9px;">&nbsp&nbsp오늘의 거래 내역</span></h5>
+		                            <div class="table-responsive">
+		                                <table class="table text-nowrap mb-0 align-middle">
+		                                    <thead class="text-dark fs-4">
+		                                    <tr>
+		                                        <th class="border-bottom-0">
+		                                            <h6 class="fw-semibold mb-0">순위</h6>
+		                                        </th>
+		                                        <th class="border-bottom-0">
+		                                            <h6 class="fw-semibold mb-0">보철명</h6>
+		                                        </th>
+		                                        <th class="border-bottom-0">
+		                                            <h6 class="fw-semibold mb-0">수량</h6>
+		                                        </th>
+		                                        <th class="border-bottom-0">
+		                                            <h6 class="fw-semibold mb-0">매출합계</h6>
+		                                        </th>
+		                                    </tr>
+		                                    </thead>
+		                                    <tbody>
+		                                    <tr>
+		                                    <c:forEach var="partnerVO" items="${partnerList}" varStatus="status">
+		                                    <h6 class="fw-semibold mb-1">${partnerVO.partner_name}</h6>
+		                                    </c:forEach>
+		                                        <td class="border-bottom-0"><h6 class="fw-semibold mb-0">1</h6></td>
+		                                        <td class="border-bottom-0">
+		                                            <h6 class="fw-semibold mb-1">Elite Admin</h6>
 		                                            <span class="fw-normal">Web Designer</span>
 		                                        </td>
 		                                        <td class="border-bottom-0">

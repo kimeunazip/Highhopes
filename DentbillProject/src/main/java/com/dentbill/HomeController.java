@@ -2,6 +2,7 @@ package com.dentbill;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,13 +15,15 @@ import lombok.Setter;
 @Controller
 public class HomeController {
 	
-	@Setter
+	@Setter(onMethod_ = @Autowired)
 	public BusinessPartnerService bPartnerService;
 
     @GetMapping("/")
     public String home(Model model) {
     	List<BusinessPartnerVO> partnerList = bPartnerService.partnersList();
-    	model.addAttribute("partnerList",partnerList);
+    	if(partnerList != null) {
+    		model.addAttribute("partnerList",partnerList);
+    	}
     	
         return "home";
     }
