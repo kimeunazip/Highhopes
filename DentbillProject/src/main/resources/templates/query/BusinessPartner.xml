@@ -8,4 +8,5 @@
 		order by partner_id
 	</select> 
 	
+	
 </mapper>
