@@ -1,4 +1,3 @@
-# Highhopes
+# Highhopes - Toy Projects
 
-Toy Projects
 1. Dentbill Project
