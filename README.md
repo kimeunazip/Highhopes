@@ -1,4 +1,4 @@
 # Highhopes
 
-Toy Project 
+Toy Projects
 1. Dentbill Project
