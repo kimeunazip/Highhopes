@@ -11,10 +11,10 @@
 		<put-attribute name="body" value="/WEB-INF/views/templates/homeBody.jsp" />
 	</definition>
 	
-	<!-- 거래관련 -->
-	<definition name="transation/*" extends="home">
-		<put-attribute name="title" value="Dentbill :: Transation" /> 
-		<put-attribute name="body" value="/WEB-INF/views/transation/{1}.jsp" />
+	<!-- 거래명세서-->
+	<definition name="transactionReciept" extends="home">
+		<put-attribute name="title" value="Dentbill :: 거래명세서" /> 
+		<put-attribute name="body" value="/WEB-INF/views/transaction/transactionReciept.jsp" />
 	</definition>
 	
 	<!-- 통계관련 -->

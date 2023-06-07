@@ -34,7 +34,7 @@
 		                        <span class="hide-menu">Transaction</span>
 		                    </li>
 		                    <li class="sidebar-item">
-		                        <a class="sidebar-link" href="/resources/html/ui-card.html" aria-expanded="false">
+		                        <a class="sidebar-link" href="/transactionReciept" aria-expanded="false">
 					                <span>
 					                  <i class="ti ti-list-check"></i>
 					                </span>
