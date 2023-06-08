@@ -11,21 +11,21 @@
 		<put-attribute name="body" value="/WEB-INF/views/templates/homeBody.jsp" />
 	</definition>
 	
-	<!-- 거래명세서-->
-	<definition name="transactionReciept" extends="home">
-		<put-attribute name="title" value="Dentbill :: 거래명세서" /> 
-		<put-attribute name="body" value="/WEB-INF/views/transaction/transactionReciept.jsp" />
+	<!-- 거래관련 -->
+	<definition name="transaction/*" extends="home">
+		<put-attribute name="title" value="Dentbill :: TRANSACTION " /> 
+		<put-attribute name="body" value="/WEB-INF/views/transaction/{1}.jsp" />
 	</definition>
 	
 	<!-- 통계관련 -->
 	<definition name="statistics/*" extends="home">
-		<put-attribute name="title" value="Dentbill :: Statistics" /> 
+		<put-attribute name="title" value="Dentbill :: STATISTICS" /> 
 		<put-attribute name="body" value="/WEB-INF/views/statistics/{1}.jsp" />
 	</definition>
 	
 	<!-- 관리관련 -->
 	<definition name="management/*" extends="home">
-		<put-attribute name="title" value="Dentbill :: Management" /> 
+		<put-attribute name="title" value="Dentbill :: MANAGEMENT" /> 
 		<put-attribute name="body" value="/WEB-INF/views/management/{1}.jsp" />
 	</definition>
 	

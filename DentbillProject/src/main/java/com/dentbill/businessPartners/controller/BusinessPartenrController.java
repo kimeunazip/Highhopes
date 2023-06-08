@@ -12,5 +12,4 @@ public class BusinessPartenrController {
 	@Setter
 	public BusinessPartnerService bPartnerService;
 	
-	//거래처목록 
 }

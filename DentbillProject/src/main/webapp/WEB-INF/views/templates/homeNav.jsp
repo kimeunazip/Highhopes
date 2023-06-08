@@ -42,7 +42,7 @@
 		                        </a>
 		                    </li>
 		                    <li class="sidebar-item">
-		                        <a class="sidebar-link" href="./ui-buttons.html" aria-expanded="false">
+		                        <a class="sidebar-link" href="/transactionStatement" aria-expanded="false">
 				                <span>
 				                  <i class="ti ti-article"></i>
 				                </span>
@@ -56,7 +56,7 @@
 		                        <span class="hide-menu">Statistics</span>
 		                    </li>
 		                    <li class="sidebar-item">
-		                        <a class="sidebar-link" href="./sample-page.html" aria-expanded="false">
+		                        <a class="sidebar-link" href="/salesStatistics" aria-expanded="false">
 					                <span>
 					                  <i class="ti ti-aperture"></i>
 					                </span>
@@ -64,7 +64,7 @@
 		                        </a>
 		                    </li>
 		                    <li class="sidebar-item">
-		                        <a class="sidebar-link" href="./ui-forms.html" aria-expanded="false">
+		                        <a class="sidebar-link" href="/transationStatistics" aria-expanded="false">
 					                <span>
 					                  <i class="ti ti-cards"></i>
 					                </span>
@@ -77,7 +77,7 @@
 		                        <span class="hide-menu">Management</span>
 		                    </li>
 		                    <li class="sidebar-item">
-		                        <a class="sidebar-link" href="./authentication-register.html" aria-expanded="false">
+		                        <a class="sidebar-link" href="/partnersManagement" aria-expanded="false">
 					                <span>
 					                  <i class="ti ti-user-plus"></i>
 					                </span>
