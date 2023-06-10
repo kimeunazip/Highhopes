@@ -26,12 +26,42 @@
               <input type="date" class="form-control" id="reg_date" aria-describedby="emailHelp">
              <label for="exp_date" class="form-label">완성일</label>
               <input type="date" class="form-control" id="exp_date" aria-describedby="emailHelp">
-             <label for="exampleInputEmail1" class="form-label">거래처</label>
+             <label for="partner_name" class="form-label">거래처</label>
+              <select class="form-select" id="partner_name" >
+	              	<optgroup label="치과">
+	              		<c:forEach var="partnerVO" items="${partnerList}" varStatus="status">
+		              		<c:if test="${partnerVO.partner_type eq '치과'}">
+					           <option>  <h6 class="fw-semibold mb-1">${partnerVO.partner_name}</h6> </option>
+			                </c:if>
+		                </c:forEach>
+	                </optgroup>
+	                <optgroup label="외주기공소">
+	              		<c:forEach var="partnerVO" items="${partnerList}" varStatus="status">
+		                	<c:if test="${partnerVO.partner_type eq '외주기공소'}">
+		                		<option>  <h6 class="fw-semibold mb-1">${partnerVO.partner_name}</h6> </option>
+			                </c:if>
+		                </c:forEach>
+	                </optgroup>
+              </select>
+             <label for="patient_name" class="form-label">환자명</label>
               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-             <label for="exampleInputEmail1" class="form-label">환자명</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-             <label for="exampleInputEmail1" class="form-label">보철명</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+             <label for="prosthetics_name" class="form-label">보철명</label>
+              <select class="form-select" id="prosthetics_name" >
+	              	<optgroup label="치과">
+	              		<c:forEach var="partnerVO" items="${partnerList}" varStatus="status">
+		              		<c:if test="${partnerVO.partner_type eq '치과'}">
+					           <option><h6 class="fw-semibold mb-1">${partnerVO.partner_name}</h6> </option>
+			                </c:if>
+		                </c:forEach>
+	                </optgroup>
+	                <optgroup label="외주기공소">
+	              		<c:forEach var="partnerVO" items="${partnerList}" varStatus="status">
+		                	<c:if test="${partnerVO.partner_type eq '외주기공소'}">
+		                		<option>  <h6 class="fw-semibold mb-1">${partnerVO.partner_name}</h6> </option>
+			                </c:if>
+		                </c:forEach>
+	                </optgroup>
+              </select>
              <label for="exampleInputEmail1" class="form-label">치식</label>
               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
              <label for="exampleInputEmail1" class="form-label">수량</label>
@@ -40,8 +70,8 @@
              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
            </div>
            <div class="mb-3">
-             <label for="exampleInputPassword1" class="form-label">Password</label>
-             <input type="password" class="form-control" id="exampleInputPassword1">
+             <label for="exampleInputPassword1" class="form-label">특이사항</label>
+             <input type="text" class="form-control" id="exampleInputPassword1">
            </div>
            <div class="mb-3 form-check">
              <input type="checkbox" class="form-check-input" id="exampleCheck1">

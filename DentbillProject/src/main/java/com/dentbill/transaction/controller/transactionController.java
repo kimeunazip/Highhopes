@@ -1,17 +1,33 @@
 package com.dentbill.transaction.controller;
 
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import com.dentbill.businessPartners.service.BusinessPartnerService;
+import com.dentbill.businessPartners.vo.BusinessPartnerVO;
+
+import lombok.Setter;
+
 
 @Controller
 public class transactionController {
+	
+	@Setter(onMethod_ = @Autowired)
+	public BusinessPartnerService bPartnerService;
 
 	//접수명단
 	@GetMapping("/transactionReciept")
     public String transactionReciept(Model model) {
+		
+		List<BusinessPartnerVO> partnerList = bPartnerService.partnersList();
+    	if(partnerList != null) {
+    		model.addAttribute("partnerList",partnerList);
+    	}
     	
         return "transaction/transactionReciept";
     }
