@@ -1,5 +1,9 @@
 package com.dentbill.dentalProsthetics.controller;
 
-public class DentalProstheticsController {
+import org.springframework.stereotype.Controller;
 
+@Controller
+public class DentalProstheticsController {
+	
+	
 }

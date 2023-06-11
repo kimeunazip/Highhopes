@@ -3,6 +3,7 @@
 <configuration>
 	<typeAliases>
 		<typeAlias type="com.dentbill.businessPartners.vo.BusinessPartnerVO" alias="BusinessPartner"/>
+		<typeAlias type="com.dentbill.dentalProsthetics.vo.DentalProstheticsVO" alias="DentalProsthetics"/>
 	</typeAliases>
 </configuration>
 
