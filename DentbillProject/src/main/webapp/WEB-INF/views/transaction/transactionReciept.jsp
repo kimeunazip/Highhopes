@@ -46,38 +46,24 @@
              <label for="patient_name" class="form-label">환자명</label>
               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
              <label for="prosthetics_name" class="form-label">보철명</label>
-              <%-- <select class="form-select" id="prosthetics_name" >
-	              	<optgroup label="치과">
-	              		<c:forEach var="prostheticsVO" items="${prostheticsList}" varStatus="status">
-		              		<c:if test="${fn:contains(prostheticsVO.prosthetic_name, 'Implant')}">
-					           <option><h6 class="fw-semibold mb-1">${prosthetic_name.prosthetic_name}</h6> </option>
-			                </c:if>
-		                </c:forEach>
-	                </optgroup>
-	                <optgroup label="외주기공소">
-	              		<c:forEach var="partnerVO" items="${partnerList}" varStatus="status">
-		                	<c:if test="${partnerVO.partner_type eq '외주기공소'}">
-		                		<option>  <h6 class="fw-semibold mb-1">${prostheticsList}</h6> </option>
-			                </c:if>
-		                </c:forEach>
-	                </optgroup>
-              </select> --%>
+           	  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
              <label for="exampleInputEmail1" class="form-label">치식</label>
               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
              <label for="exampleInputEmail1" class="form-label">수량</label>
               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
              <label for="exampleInputEmail1" class="form-label">쉐이드</label>
-             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
            </div>
            <div class="mb-3">
              <label for="exampleInputPassword1" class="form-label">특이사항</label>
              <input type="text" class="form-control" id="exampleInputPassword1">
            </div>
-           <div class="mb-3 form-check">
+           <!-- <div class="mb-3 form-check">
              <input type="checkbox" class="form-check-input" id="exampleCheck1">
              <label class="form-check-label" for="exampleCheck1">Check me out</label>
-           </div>
-           <button type="submit" class="btn btn-primary">Submit</button>
+           </div> -->
+           <button type="submit" class="btn btn-primary">접수완료</button>
+           <button type="button" class="btn btn-primary">초기화</button>
          </form>
        </div>
      </div>
