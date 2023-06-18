@@ -45,7 +45,7 @@
               </select>
              <label for="patient_name" class="form-label">환자명</label>
               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-             <label for="prosthetics_name" class="form-label">보철명</label>
+             <label for="prosthetics_name" class="form-label">보철종류</label>
            	  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
              <label for="exampleInputEmail1" class="form-label">치식</label>
               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -55,7 +55,7 @@
               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
            </div>
            <div class="mb-3">
-             <label for="exampleInputPassword1" class="form-label">특이사항</label>
+             <label for="exampleInputPassword1" class="form-label">Memo</label>
              <input type="text" class="form-control" id="exampleInputPassword1">
            </div>
            <!-- <div class="mb-3 form-check">
@@ -67,7 +67,7 @@
          </form>
        </div>
      </div>
-     <h5 class="card-title fw-semibold mb-4">Disabled forms</h5>
+    <!--  <h5 class="card-title fw-semibold mb-4">Disabled forms</h5>
      <div class="card mb-0">
        <div class="card-body">
          <form>
@@ -95,6 +95,6 @@
            </fieldset>
          </form>
        </div>
-     </div>
+     </div> -->
    </div>
  </div>
