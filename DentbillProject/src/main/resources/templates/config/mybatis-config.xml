@@ -4,6 +4,7 @@
 	<typeAliases>
 		<typeAlias type="com.dentbill.businessPartners.vo.BusinessPartnerVO" alias="BusinessPartner"/>
 		<typeAlias type="com.dentbill.dentalProsthetics.vo.DentalProstheticsVO" alias="DentalProsthetics"/>
+		<typeAlias type="com.dentbill.transaction.vo.TransationVO" alias="Transaction"/>
 	</typeAliases>
 </configuration>
 

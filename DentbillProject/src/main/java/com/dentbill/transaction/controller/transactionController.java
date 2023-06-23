@@ -32,7 +32,7 @@ public class transactionController {
     	if(partnerList != null) {
     		model.addAttribute("partnerList",partnerList);
     	}
-    	
+    
     	
     	List<DentalProstheticsVO> prostheticsList = prostheticsService.prostheticsList();
 	 
