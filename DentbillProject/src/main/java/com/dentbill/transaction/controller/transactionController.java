@@ -20,7 +20,8 @@ public class transactionController {
 	
 	@Setter(onMethod_ = @Autowired)
 	public BusinessPartnerService bPartnerService;
-	@Setter
+	
+	@Setter(onMethod_ = @Autowired)
 	public DentalProstheticsService prostheticsService;
 
 	//접수명단
@@ -32,13 +33,13 @@ public class transactionController {
     		model.addAttribute("partnerList",partnerList);
     	}
     	
-    	/*
-    	  List<DentalProstheticsVO> prostheticsList = prostheticsService.prostheticsList();
-    	 
+    	
+    	List<DentalProstheticsVO> prostheticsList = prostheticsService.prostheticsList();
+	 
     	if(prostheticsList != null) {
     		model.addAttribute("prostheticsList",prostheticsList);
     	}
-    	*/
+    	
     	
     	
         return "transaction/transactionReciept";

@@ -46,7 +46,11 @@
              <label for="patient_name" class="form-label">환자명</label>
               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
              <label for="prosthetics_name" class="form-label">보철종류</label>
-           	  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+             	<select class="form-select" id="dental_prosthetics_name" >
+              		<c:forEach var="prostheticsVO" items="${prostheticsList}" varStatus="status">
+	              		<option>  <h6 class="fw-semibold mb-1">${prostheticsVO.prosthetic_name}</h6> </option>>
+	                </c:forEach>
+              </select>
              <label for="exampleInputEmail1" class="form-label">치식</label>
               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
              <label for="exampleInputEmail1" class="form-label">수량</label>
@@ -63,7 +67,6 @@
              <label class="form-check-label" for="exampleCheck1">Check me out</label>
            </div> -->
            <button type="submit" class="btn btn-primary">접수완료</button>
-           <button type="button" class="btn btn-primary">초기화</button>
          </form>
        </div>
      </div>
