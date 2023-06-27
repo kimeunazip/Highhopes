@@ -5,9 +5,9 @@
 	<!-- 접수명단 등록-->
 	<insert id="transactinoInsert" parameterType="Transaction">
 		insert into dentbill_transaction
-		(bill_id,reg_date,exp_date,clinic_id,patient_name,prosthetic_id,shade,amount,formula_id,note)
+		(bill_id,reg_date,exp_date,clinic_id,patient_name,prosthetic_id,shade,amount,formula_id,memo)
 		values(bill_id_func(#{reg_date}),#{reg_date},#{exp_date},#{partner_id},#{patient_name},
-		#{prosthetic_id},#{shade},#{amount},#{formula_id},#{note})
+		#{prosthetic_id},#{shade},#{amount},#{formula_id},#{memo})
 	</insert>
 
 </mapper>

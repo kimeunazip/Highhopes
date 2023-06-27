@@ -7,6 +7,7 @@
 		margin-top: 0.5rem;
 	}
 </style>
+<script src="/resources/libs/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript">
 	window.onload = function() {
 		today = new Date();
@@ -14,6 +15,12 @@
 		regD = document.getElementById("reg_date");
 		regD.value = today;
 	}
+	$(function(){
+		$(".transationInsert").click(function(){
+			alert("Dd");
+		});
+	});
+	
 </script>
  <div class="card">
    <div class="card-body">
@@ -60,9 +67,9 @@
            </div>
            <div class="mb-3">
              <label for="exampleInputPassword1" class="form-label">Memo</label>
-             <input type="text" class="form-control" id="note" name="note">
+             <input type="text" class="form-control" id="memo" name="memo">
            </div>
-           <button type="submit" class="btn btn-primary">접수완료</button>
+           <button type="submit" class="btn btn-primary transationInsert" id="transationInsert">접수완료</button>
          </form>
        </div>
      </div>
