@@ -15,7 +15,7 @@
 		regD = document.getElementById("reg_date");
 		regD.value = today;
 	}
-	$(function(){
+	$(function(){ 
 		$(".transationInsert").click(function(){
 			alert("Dd");
 		});
