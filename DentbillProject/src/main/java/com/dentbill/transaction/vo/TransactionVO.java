@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = false)
 public class TransactionVO{
+	
 	//접수내용 10개컬럼
 	private int bill_id = 0;
 	private String reg_date = "";
@@ -21,5 +22,5 @@ public class TransactionVO{
 	private String formula_id = "";
 	private int amount = 0;
 	private String shade = "";
-	private String note = "";
+	private String memo = "";
 }

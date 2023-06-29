@@ -30,9 +30,9 @@
          <form>
            <div class="mb-3">
              <label for="reg_date" class="form-label">접수일</label>
-              <input type="date" class="form-control" id="reg_date" name="reg_date"  aria-describedby="emailHelp">
+              <input type="date" class="form-control" id="reg_date" name="reg_date" >
              <label for="exp_date" class="form-label">완성일</label>
-              <input type="date" class="form-control" id="exp_date" name="exp_date" aria-describedby="emailHelp">
+              <input type="date" class="form-control" id="exp_date" name="exp_date">
              <label for="partner_name" class="form-label">거래처</label>
               <select class="form-select" id="partner_name" >
 	              	<optgroup label="치과">
@@ -51,7 +51,7 @@
 	                </optgroup>
               </select>
              <label for="patient_name" class="form-label">환자명</label>
-              <input type="email" class="form-control" id="patient_name" name="patient_name" aria-describedby="emailHelp">
+              <input type="email" class="form-control" id="patient_name" name="patient_name">
              <label for="prosthetics_name" class="form-label">보철종류</label>
              	<select class="form-select" id="dental_prosthetics_name" >
               		<c:forEach var="prostheticsVO" items="${prostheticsList}" varStatus="status">
@@ -59,11 +59,11 @@
 	                </c:forEach>
               </select>
              <label for="exampleInputEmail1" class="form-label">치식</label>
-              <input type="email" class="form-control" id="formula_id" name="formula_id" aria-describedby="emailHelp">
+              <input type="email" class="form-control" id="formula_id" name="formula_id">
              <label for="exampleInputEmail1" class="form-label">수량</label>
-              <input type="email" class="form-control" id="amount" name="amount" aria-describedby="emailHelp">
+              <input type="email" class="form-control" id="amount" name="amount">
              <label for="exampleInputEmail1" class="form-label">쉐이드</label>
-              <input type="email" class="form-control" id="shade" name="shade" aria-describedby="emailHelp">
+              <input type="email" class="form-control" id="shade" name="shade">
            </div>
            <div class="mb-3">
              <label for="exampleInputPassword1" class="form-label">Memo</label>

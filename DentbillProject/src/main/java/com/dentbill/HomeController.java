@@ -18,7 +18,7 @@ public class HomeController {
 	@Setter(onMethod_ = @Autowired)
 	public BusinessPartnerService bPartnerService;
 
-    @GetMapping("/")
+    @GetMapping("/afterLogin")
     public String home(Model model) {
     	List<BusinessPartnerVO> partnerList = bPartnerService.partnersList();
     	if(partnerList != null) {
@@ -26,6 +26,11 @@ public class HomeController {
     	}
     	
         return "home";
+    }
+    
+    @GetMapping("/")
+    public String landingPage(Model model) {
+        return "landing/landingPage";
     }
 
 }
