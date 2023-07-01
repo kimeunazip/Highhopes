@@ -18,6 +18,12 @@ public class HomeController {
 	@Setter(onMethod_ = @Autowired)
 	public BusinessPartnerService bPartnerService;
 
+    @GetMapping("/login")
+    public String login(Model model) {
+    	
+        return "auth/login";
+    }
+    
     @GetMapping("/afterLogin")
     public String home(Model model) {
     	List<BusinessPartnerVO> partnerList = bPartnerService.partnersList();
