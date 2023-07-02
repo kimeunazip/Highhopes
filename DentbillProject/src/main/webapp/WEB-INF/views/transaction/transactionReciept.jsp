@@ -6,6 +6,10 @@
 	.form-label{
 		margin-top: 0.5rem;
 	}
+	.form-check{
+		display:inline-block;
+	    padding-left: 2em;
+	}
 </style>
 <script src="/resources/libs/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript">
@@ -53,7 +57,7 @@
              <label for="patient_name" class="form-label">환자명</label>
               <input type="email" class="form-control" id="patient_name" name="patient_name">
              <label for="prosthetics_name" class="form-label">보철종류</label>
-             	<select class="form-select" id="dental_prosthetics_name" >
+              <select class="form-select" id="dental_prosthetics_name" >
               		<c:forEach var="prostheticsVO" items="${prostheticsList}" varStatus="status">
 	              		<option>  <h6 class="fw-semibold mb-1">${prostheticsVO.prosthetic_name}</h6> </option>>
 	                </c:forEach>
@@ -64,6 +68,14 @@
               <input type="email" class="form-control" id="amount" name="amount">
              <label for="exampleInputEmail1" class="form-label">쉐이드</label>
               <input type="email" class="form-control" id="shade" name="shade">
+           </div>
+           <div class="form-check">
+             <input type="checkbox" class="form-check-input" id="remakeCheck">
+             <label class="form-check-label" for="remakeCheck">Remake</label>
+           </div>
+           <div class="form-check">
+             <input type="checkbox" class="form-check-input" id="repairCheck">
+             <label class="form-check-label" for="repairCheck">Repair</label>
            </div>
            <div class="mb-3">
              <label for="exampleInputPassword1" class="form-label">Memo</label>
