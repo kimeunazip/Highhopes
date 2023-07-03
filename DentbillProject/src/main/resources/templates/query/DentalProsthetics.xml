@@ -2,11 +2,18 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.dentbill.dentalProsthetics.dao.DentalProstheticsDAO">
 
-	<!-- 거래처 리스트 -->
+	<!--보철 리스트 -->
 	<select id="prostheticsList" resultType="DentalProsthetics" >
 		select distinct PROSTHETIC_NAME 
 		from DENTAL_PROSTHETICS
 		order by PROSTHETIC_NAME
+	</select> 
+	
+	<!--보철 아이디 구하기 -->
+	<select id="getProstheticsId" resultType="String" parameterType="Transaction">
+		select prosthetic_id
+		from dental_prosthetics
+		where prosthetic_name = #{partner_id} and partner_id = #{patient_id};
 	</select> 
 	
 	

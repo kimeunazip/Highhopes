@@ -40,8 +40,6 @@ public class transactionController {
     		model.addAttribute("prostheticsList",prostheticsList);
     	}
     	
-    	
-    	
         return "transaction/transactionReciept";
     }
 	

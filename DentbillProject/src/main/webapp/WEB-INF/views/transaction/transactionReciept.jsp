@@ -23,6 +23,11 @@
 		$(".transationInsert").click(function(){
 			alert("Dd");
 		});
+		
+		$("#dental_prosthetics_name").change(function(){
+			prosthetics_name = $("select[name=dental_prosthetics_name]").val();
+			alert(prosthetics_name);
+		});
 	});
 	
 </script>
@@ -38,7 +43,7 @@
              <label for="exp_date" class="form-label">완성일</label>
               <input type="date" class="form-control" id="exp_date" name="exp_date">
              <label for="partner_name" class="form-label">거래처</label>
-              <select class="form-select" id="partner_name" >
+              <select class="form-select" id="partner_name" name="partner_name">
 	              	<optgroup label="치과">
 	              		<c:forEach var="partnerVO" items="${partnerList}" varStatus="status">
 		              		<c:if test="${partnerVO.partner_type eq '치과'}">
@@ -57,7 +62,7 @@
              <label for="patient_name" class="form-label">환자명</label>
               <input type="email" class="form-control" id="patient_name" name="patient_name">
              <label for="prosthetics_name" class="form-label">보철종류</label>
-              <select class="form-select" id="dental_prosthetics_name" >
+              <select class="form-select" id="dental_prosthetics_name" name="dental_prosthetics_name">
               		<c:forEach var="prostheticsVO" items="${prostheticsList}" varStatus="status">
 	              		<option>  <h6 class="fw-semibold mb-1">${prostheticsVO.prosthetic_name}</h6> </option>>
 	                </c:forEach>
@@ -81,7 +86,8 @@
              <label for="exampleInputPassword1" class="form-label">Memo</label>
              <input type="text" class="form-control" id="memo" name="memo">
            </div>
-           <button type="submit" class="btn btn-primary transationInsert" id="transationInsert">접수완료</button>
+           <button type="button" class="btn btn-outline-primary m-1" id="transationInsert">추가</button>
+           <button type="submit" class="btn btn-primary transationSubmit" id="transationSubmit">접수완료</button>
          </form>
        </div>
      </div>
