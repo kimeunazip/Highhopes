@@ -48,7 +48,7 @@ public class transactionController {
 	//접수등록
 	@GetMapping("/transactionSubmit")
 	public String transactionSubmit(Model model) {
-		return "redirect:";
+		return "";
 	}
 	
 	//거래명세서
