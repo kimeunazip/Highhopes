@@ -13,7 +13,7 @@
 	<select id="getProstheticsId" resultType="String" parameterType="Transaction">
 		select prosthetic_id
 		from dental_prosthetics
-		where prosthetic_name = #{partner_id} and partner_id = #{patient_id};
+		where prosthetic_name = #{prosthetic_name} and partner_id = #{partner_id};
 	</select> 
 	
 	

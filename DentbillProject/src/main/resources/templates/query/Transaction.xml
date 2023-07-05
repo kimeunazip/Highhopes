@@ -5,9 +5,12 @@
 	<!-- 접수명단 등록-->
 	<insert id="transactinoInsert" parameterType="Transaction">
 		insert into dentbill_transaction
-		(bill_id,reg_date,exp_date,clinic_id,patient_name,prosthetic_id,shade,amount,formula_id,memo)
-		values(bill_id_func(#{reg_date}),#{reg_date},#{exp_date},#{partner_id},#{patient_name},
-		#{prosthetic_id},#{shade},#{amount},#{formula_id},#{memo})
+		(bill_id,reg_date,exp_date,partner_id,patient_name,prosthetic_id,shade,amount,formula_id)
+		values(bill_id_func(#{reg_date}),#{reg_date},'#{exp_date}',(select partner_id
+		from  business_partner 
+		where partner_name=#{partner_name}),#{patient_name},
+		(select a.prosthetic_id
+        from dental_prosthetics a inner join business_partner b on a.partner_id = b.partner_id 
+        where a.prosthetic_name=#{prosthetic_name} and b.partner_name=#{partner_name}),#{shade},#{amount},#{formula_id})
 	</insert>
-
 </mapper>

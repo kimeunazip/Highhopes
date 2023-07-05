@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.dentbill.transaction.dao.TransactionDAO;
+import com.dentbill.transaction.vo.TransactionVO;
 
 import lombok.Setter;
 
@@ -14,9 +15,9 @@ public class TransactionServiceImpl implements TransactionService {
 	private TransactionDAO transactionDao;
 	
 	@Override
-	public int transactinoInsert() {
-		int transactionInsert = transactionDao.transactinoInsert();
-		return transactionInsert;
+	public int transactinoInsert(TransactionVO tvo) {
+		int result = transactionDao.transactinoInsert(tvo);
+		return result;
 	}
 	
 }

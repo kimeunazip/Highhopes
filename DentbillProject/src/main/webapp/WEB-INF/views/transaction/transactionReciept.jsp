@@ -20,14 +20,24 @@
 		regD.value = today;
 	}
 	$(function(){ 
-		$(".transationInsert").click(function(){
-			alert("Dd");
+		$("#transationInsert").click(function(){
+			$("#transactionInsert-form").attr({
+				"method":"post",
+				"action":"/transactinoInsert"
+			});
+			$("#transactionInsert-form").submit();
 		});
 		
 		$("#dental_prosthetics_name").change(function(){
 			prosthetics_name = $("select[name=dental_prosthetics_name]").val();
 			alert(prosthetics_name);
 		});
+		
+		/*접수 완료 후 성공/실패 alert 후 redirect*/
+		if('${message}' != ""){
+			var message = "${message}" ;
+			alert(message);
+		}
 	});
 	
 </script>
@@ -36,7 +46,7 @@
      <h5 class="card-title fw-semibold mb-4">Forms</h5>
      <div class="card">
        <div class="card-body">
-         <form>
+         <form id="transactionInsert-form">
            <div class="mb-3">
              <label for="reg_date" class="form-label">접수일</label>
               <input type="date" class="form-control" id="reg_date" name="reg_date" >
@@ -86,8 +96,8 @@
              <label for="exampleInputPassword1" class="form-label">Memo</label>
              <input type="text" class="form-control" id="memo" name="memo">
            </div>
-           <button type="button" class="btn btn-outline-primary m-1" id="transationInsert">추가</button>
-           <button type="submit" class="btn btn-primary transationSubmit" id="transationSubmit">접수완료</button>
+           <button type="button" class="btn btn-outline-primary m-1" id="transationInsertAdd">추가</button>
+           <button type="button" class="btn btn-primary transationSubmit" id="transationInsert">접수완료</button>
          </form>
        </div>
      </div>
