@@ -72,7 +72,7 @@
              <label for="patient_name" class="form-label">환자명</label>
               <input type="email" class="form-control" id="patient_name" name="patient_name">
              <label for="prosthetics_name" class="form-label">보철종류</label>
-              <select class="form-select" id="dental_prosthetics_name" name="dental_prosthetics_name">
+              <select class="form-select" id="prosthetics_name" name="prosthetic_name">
               		<c:forEach var="prostheticsVO" items="${prostheticsList}" varStatus="status">
 	              		<option>  <h6 class="fw-semibold mb-1">${prostheticsVO.prosthetic_name}</h6> </option>>
 	                </c:forEach>

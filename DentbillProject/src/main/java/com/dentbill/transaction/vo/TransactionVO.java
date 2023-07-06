@@ -23,7 +23,6 @@ public class TransactionVO{
 	private int amount = 0;
 	private String shade = "";
 	private String memo = "";
-	
 	private String prosthetic_name = "";
 	private String partner_name = "";
 }

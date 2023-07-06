@@ -1,5 +1,6 @@
 package com.dentbill.transaction.controller;
 
+import java.io.Console;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,19 +50,20 @@ public class transactionController {
     }
 	
 	//접수등록
-	@PostMapping(value ="/transactinoInsert", produces="application/text; charset=UTF-8;")
+	@PostMapping(value ="/transactinoInsert")
 	public String transactinoInsert(@ModelAttribute TransactionVO tvo,Model model) {
+		System.out.println("tvo"+tvo.toString());
 		int result = transactionService.transactinoInsert(tvo);
 		String message ="";
 		
 		if(result == 1) {
-			message = "등록되었습니다.";
+			message = "정상 등록되었습니다.";
 			model.addAttribute("message", message);
 		}else {
-			message = "죄송합니다.다시 접수해주세요.";
+			message = "죄송합니다.다시 시도해주세요.";
 			model.addAttribute("message", message);
 		}
-		return "transaction/transactionReciept";
+		return "redirect:/transactionReciept";
 	}
 	
 	
