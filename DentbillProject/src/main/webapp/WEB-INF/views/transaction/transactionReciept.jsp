@@ -13,23 +13,54 @@
 </style>
 <script src="/resources/libs/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript">
+ 
 	window.onload = function() {
 		today = new Date();
 		today = today.toISOString().slice(0, 10);
 		regD = document.getElementById("reg_date");
 		regD.value = today;
 	}
+	
+	function chkSubmit(item, msg){
+		if(item.val().replace(/\s/g,"")==""){
+			alert(msg + "확인해 주세요.");
+			return false;
+		} else{
+			return true;
+		}
+	}
+ 
 	$(function(){ 
+	
 		$("#transationInsert").click(function(){
-			$("#transactionInsert-form").attr({
-				"method":"post",
-				"action":"/transactinoInsert"
-			});
-			$("#transactionInsert-form").submit();
+			
+			//null값 확인
+			if(chkSubmit($("#exp_date"),'완성일자를 ')){
+				return false;
+			}else if(chkSubmit($("select[name=partner_name]"),'거래처를 ')){
+				return false;
+			}else if(chkSubmit($("#patient_name").val().replace(/\s/g,"")=="")){
+				alert("환자명을 확인해 주세요.");
+				return false;
+			}else if(chkSubmit($("select[name=prosthetics_name]"),'보철명을 ')){
+				return false;
+			}else if(chkSubmit($("#formula_id"),'치식을 ')){
+				return false;
+			}else if(chkSubmit($("#amount"),'수량을 ')){
+				return false;
+			}else if(chkSubmit($("#shade"),'쉐이드를 ')){
+				return false;
+			}else{
+				$("#transactionInsert-form").attr({
+					"method":"post",
+					"action":"/transactinoInsert"
+				});
+				$("#transactionInsert-form").submit();
+			}
 		});
 		
-		$("#dental_prosthetics_name").change(function(){
-			prosthetics_name = $("select[name=dental_prosthetics_name]").val();
+		$("#prosthetic_name").change(function(){
+			prosthetics_name = $("select[name=prosthetic_name]").val();
 			alert(prosthetics_name);
 		});
 		
