@@ -1,9 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!--  Body Wrapper -->
-  <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
-    data-sidebar-position="fixed" data-header-position="fixed">
-    <!--  Main wrapper -->
     <div class="container-fluid">
           <div class="card">
             <div class="card-body">
@@ -52,4 +48,3 @@
             </div>
           </div>
         </div>
-  </div>

@@ -1,6 +1,5 @@
 package com.dentbill.transaction.controller;
 
-import java.io.Console;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +33,13 @@ public class transactionController {
 	public TransactionService transactionService;
 
 	//접수명단
+		@GetMapping("/transactionList")
+	    public String transactionList(Model model) {
+			
+	        return "transaction/transactionList";
+	    }
+		
+	//접수등록
 	@GetMapping("/transactionReciept")
     public String transactionReciept(Model model) {
 		
@@ -63,7 +69,7 @@ public class transactionController {
 			message = "죄송합니다.다시 시도해주세요.";
 			model.addAttribute("message", message);
 		}
-		return "redirect:/transactionReciept";
+		return "redirect:/transactionList";
 	}
 	
 	

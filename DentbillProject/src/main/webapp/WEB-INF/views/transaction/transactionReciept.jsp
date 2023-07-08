@@ -33,32 +33,38 @@
 	$(function(){ 
 	
 		$("#transationInsert").click(function(){
-			
-			//null값 확인
-			if(chkSubmit($("#exp_date"),'완성일자를 ')){
-				return false;
-			}else if(chkSubmit($("select[name=partner_name]"),'거래처를 ')){
-				return false;
-			}else if(chkSubmit($("#patient_name").val().replace(/\s/g,"")=="")){
-				alert("환자명을 확인해 주세요.");
-				return false;
-			}else if(chkSubmit($("select[name=prosthetics_name]"),'보철명을 ')){
-				return false;
-			}else if(chkSubmit($("#formula_id"),'치식을 ')){
-				return false;
-			}else if(chkSubmit($("#amount"),'수량을 ')){
-				return false;
-			}else if(chkSubmit($("#shade"),'쉐이드를 ')){
-				return false;
-			}else{
-				$("#transactionInsert-form").attr({
-					"method":"post",
-					"action":"/transactinoInsert"
-				});
-				$("#transactionInsert-form").submit();
-			}
+			$("#transactionInsert-form").attr({
+				"method":"post",
+				"action":"/transactinoInsert"
+			});
+			$("#transactionInsert-form").submit();
 		});
+		/*
+		//null값 확인
+		if(chkSubmit($("#exp_date"),'완성일자를 ')){
+			return false;
+		}else{
+			$("#transactionInsert-form").attr({
+				"method":"post",
+				"action":"/transactinoInsert"
+			});
+			$("#transactionInsert-form").submit();
+		}
 		
+		else if(chkSubmit($("select[name=partner_name]"),'거래처를 ')){
+		return false;
+	}else if(chkSubmit($("#patient_name").val().replace(/\s/g,"")=="")){
+		alert("환자명을 확인해 주세요.");
+		return false;
+	}else if(chkSubmit($("select[name=prosthetics_name]"),'보철명을 ')){
+		return false;
+	}else if(chkSubmit($("#formula_id"),'치식을 ')){
+		return false;
+	}else if(chkSubmit($("#amount"),'수량을 ')){
+		return false;
+	}else if(chkSubmit($("#shade"),'쉐이드를 ')){
+		return false;
+	}*/
 		$("#prosthetic_name").change(function(){
 			prosthetics_name = $("select[name=prosthetic_name]").val();
 			alert(prosthetics_name);
@@ -128,7 +134,7 @@
              <input type="text" class="form-control" id="memo" name="memo">
            </div>
            <button type="button" class="btn btn-outline-primary m-1" id="transationInsertAdd">추가</button>
-           <button type="button" class="btn btn-primary transationSubmit" id="transationInsert">접수완료</button>
+           <button type="button" class="btn btn-primary transationInsert" id="transationInsert">접수완료</button>
          </form>
        </div>
      </div>
