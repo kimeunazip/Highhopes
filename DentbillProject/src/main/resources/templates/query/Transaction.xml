@@ -6,7 +6,7 @@
 	<select id="transactionList" parameterType="String" resultType="Transaction" >
 		select *
         from dentbill_transaction
-        where #{sysdate} = TO_CHAR(reg_date, 'YY/MM/DD');
+        where #{sysdate} = TO_CHAR(reg_date, 'YY/MM/DD')
 	</select> 
 	
 	<!-- 접수등록-->

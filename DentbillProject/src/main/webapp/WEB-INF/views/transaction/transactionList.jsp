@@ -29,57 +29,41 @@
 	                         <th class="border-bottom-0">
 	                             <h6 class="fw-semibold mb-0">수량</h6>
 	                         </th>
+	                         <th class="border-bottom-0">
+	                             <h6 class="fw-semibold mb-0">완성날짜</h6>
+	                         </th>
+	                         <th class="border-bottom-0">
+	                             <h6 class="fw-semibold mb-0">메모</h6>
+	                         </th>
 	                     </tr>
 	                     </thead>
 	                     <tbody>
-	                     <tr>
-	                         <td class="border-bottom-0"><h6 class="fw-semibold mb-0">1</h6></td>
-	                         <td class="border-bottom-0">
-	                             <h6 class="fw-semibold mb-1">Elite Admin</h6>
-	                             <span class="fw-normal">Web Designer</span>
-	                         </td>
-	                         <td class="border-bottom-0">
-	                             <p class="mb-0 fw-normal">Elite Admin</p>
-	                         </td>
-	                         <td class="border-bottom-0">
-	                             <h6 class="fw-semibold mb-0 fs-4">$3.9</h6>
-	                         </td>
-	                          <td class="border-bottom-0">
-	                             <h6 class="fw-semibold mb-0 fs-4">$3.9</h6>
-	                         </td>
-	                     </tr>
-	                     <tr>
-	                         <td class="border-bottom-0"><h6 class="fw-semibold mb-0">2</h6></td>
-	                         <td class="border-bottom-0">
-	                             <h6 class="fw-semibold mb-1">Andrew McDownland</h6>
-	                             <span class="fw-normal">Project Manager</span>
-	                         </td>
-	                         <td class="border-bottom-0">
-	                             <p class="mb-0 fw-normal">Real Homes WP Theme</p>
-	                         </td>
-	                         <td class="border-bottom-0">
-	                             <h6 class="fw-semibold mb-0 fs-4">$24.5k</h6>
-	                         </td>
-	                         <td class="border-bottom-0">
-	                             <h6 class="fw-semibold mb-0 fs-4">$24.5k</h6>
-	                         </td>
-	                     </tr>
-	                     <tr>
-	                         <td class="border-bottom-0"><h6 class="fw-semibold mb-0">3</h6></td>
-	                         <td class="border-bottom-0">
-	                             <h6 class="fw-semibold mb-1">Christopher Jamil</h6>
-	                             <span class="fw-normal">Project Manager</span>
-	                         </td>
-	                         <td class="border-bottom-0">
-	                             <p class="mb-0 fw-normal">MedicalPro WP Theme</p>
-	                         </td>
-	                         <td class="border-bottom-0">
-	                             <h6 class="fw-semibold mb-0 fs-4">$12.8k</h6>
-	                         </td>
-	                         <td class="border-bottom-0">
-	                             <h6 class="fw-semibold mb-0 fs-4">$12.8k</h6>
-	                         </td>
-	                     </tr>
+		                     <c:forEach var="transactionVO" items="${transactinoList}" varStatus="status">
+			                     <tr>
+			                         <td class="border-bottom-0"><h6 class="fw-semibold mb-0">2</h6>${status.count}</td>
+			                         <td class="border-bottom-0">
+			                             <h6 class="fw-semibold mb-1">${transactionVO.partner_name}</h6>
+			                         </td>
+			                         <td class="border-bottom-0">
+			                             <p class="mb-0 fw-normal">${transactionVO.patient_name}</p>
+			                         </td>
+			                         <td class="border-bottom-0">
+			                             <h6 class="fw-semibold mb-0 fs-4">${transactionVO.prosthetic_name}</h6>
+			                         </td>
+			                         <td class="border-bottom-0">
+			                             <h6 class="fw-semibold mb-0 fs-4">${transactionVO.shade}</h6>
+			                         </td>
+			                          <td class="border-bottom-0">
+			                             <h6 class="fw-semibold mb-0 fs-4">${transactionVO.amount}</h6>
+			                         </td>
+			                          <td class="border-bottom-0">
+			                             <h6 class="fw-semibold mb-0 fs-4">${transactionVO.exp_date}</h6>
+			                         </td>
+			                          <td class="border-bottom-0">
+			                             <h6 class="fw-semibold mb-0 fs-4">${transactionVO.memo}</h6>
+			                         </td>
+			                     </tr>
+		                     </c:forEach>
 	                     </tbody>
 	                 </table>
 	             </div>
