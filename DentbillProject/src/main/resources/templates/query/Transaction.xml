@@ -4,9 +4,11 @@
 
 	<!-- 접수명단 리스트 -->
 	<select id="transactionList" parameterType="String" resultType="Transaction" >
-		select *
-        from dentbill_transaction
-        where #{sysdate} = TO_CHAR(reg_date, 'YY/MM/DD')
+		select a.reg_date,TO_CHAR(a.exp_date, 'YY/MM/DD') exp_date,a.patient_name,a.formula_id, a.shade,a.memo,a.amount,b.partner_name,c.prosthetic_name
+        from dentbill_transaction a 
+        	inner join business_partner b on a.partner_id = b.partner_id
+        	inner join dental_prosthetics c on a.prosthetic_id = c.prosthetic_id
+        where #{sysdate} = TO_CHAR(a.reg_date, 'YY/MM/DD')
 	</select> 
 	
 	<!-- 접수등록-->

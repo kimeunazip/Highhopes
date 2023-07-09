@@ -23,11 +23,14 @@
 	                         <th class="border-bottom-0">
 	                             <h6 class="fw-semibold mb-0">보철명</h6>
 	                         </th>
-	                         <th class="border-bottom-0">
-	                             <h6 class="fw-semibold mb-0">쉐이드</h6>
+	                       	 <th class="border-bottom-0">
+	                             <h6 class="fw-semibold mb-0">치식</h6>
 	                         </th>
 	                         <th class="border-bottom-0">
 	                             <h6 class="fw-semibold mb-0">수량</h6>
+	                         </th>
+	                           <th class="border-bottom-0">
+	                             <h6 class="fw-semibold mb-0">쉐이드</h6>
 	                         </th>
 	                         <th class="border-bottom-0">
 	                             <h6 class="fw-semibold mb-0">완성날짜</h6>
@@ -40,27 +43,30 @@
 	                     <tbody>
 		                     <c:forEach var="transactionVO" items="${transactinoList}" varStatus="status">
 			                     <tr>
-			                         <td class="border-bottom-0"><h6 class="fw-semibold mb-0">2</h6>${status.count}</td>
+			                         <td class="border-bottom-0"><h6 class="mb-0 fw-normal">${status.count}</h6></td>
 			                         <td class="border-bottom-0">
-			                             <h6 class="fw-semibold mb-1">${transactionVO.partner_name}</h6>
+			                             <h6 class="mb-0 fw-normal">${transactionVO.partner_name}</h6>
 			                         </td>
 			                         <td class="border-bottom-0">
-			                             <p class="mb-0 fw-normal">${transactionVO.patient_name}</p>
+			                             <h6 class="mb-0 fw-normal">${transactionVO.patient_name}</h6>
 			                         </td>
 			                         <td class="border-bottom-0">
-			                             <h6 class="fw-semibold mb-0 fs-4">${transactionVO.prosthetic_name}</h6>
+			                             <h6 class="mb-0 fw-normal">${transactionVO.prosthetic_name}</h6>
 			                         </td>
 			                         <td class="border-bottom-0">
-			                             <h6 class="fw-semibold mb-0 fs-4">${transactionVO.shade}</h6>
+			                             <h6 class="mb-0 fw-normal">${transactionVO.formula_id}</h6>
 			                         </td>
 			                          <td class="border-bottom-0">
-			                             <h6 class="fw-semibold mb-0 fs-4">${transactionVO.amount}</h6>
+			                             <h6 class="mb-0 fw-normal">${transactionVO.amount}</h6>
+			                         </td>
+			                         <td class="border-bottom-0">
+			                             <h6 class="mb-0 fw-normal">${transactionVO.shade}</h6>
 			                         </td>
 			                          <td class="border-bottom-0">
-			                             <h6 class="fw-semibold mb-0 fs-4">${transactionVO.exp_date}</h6>
+			                             <h6 class="mb-0 fw-normal">${transactionVO.exp_date}</h6>
 			                         </td>
 			                          <td class="border-bottom-0">
-			                             <h6 class="fw-semibold mb-0 fs-4">${transactionVO.memo}</h6>
+			                             <h6 class="mb-0 fw-normal">${transactionVO.memo}</h6>
 			                         </td>
 			                     </tr>
 		                     </c:forEach>
