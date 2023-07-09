@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 public class TransactionVO{
 	
 	//접수내용 10개컬럼
-	private int bill_id = 0;
+	private long bill_id = 0;
 	private String reg_date = "";
 	private String exp_date = "";
 	private String patient_name = "";

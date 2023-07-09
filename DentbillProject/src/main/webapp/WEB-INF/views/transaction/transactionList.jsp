@@ -24,10 +24,10 @@
 	                             <h6 class="fw-semibold mb-0">보철명</h6>
 	                         </th>
 	                         <th class="border-bottom-0">
-	                             <h6 class="fw-semibold mb-0">수량</h6>
+	                             <h6 class="fw-semibold mb-0">쉐이드</h6>
 	                         </th>
 	                         <th class="border-bottom-0">
-	                             <h6 class="fw-semibold mb-0"></h6>
+	                             <h6 class="fw-semibold mb-0">수량</h6>
 	                         </th>
 	                     </tr>
 	                     </thead>

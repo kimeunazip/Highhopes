@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.dentbill.transaction.dao.TransactionDAO">
+
+	<!-- 접수명단 리스트 -->
+	<select id="transactionList" parameterType="String" resultType="Transaction" >
+		select *
+        from dentbill_transaction
+        where #{sysdate} = TO_CHAR(reg_date, 'YY/MM/DD');
+	</select> 
 	
-	<!-- 접수명단 등록-->
+	<!-- 접수등록-->
 	<insert id="transactinoInsert" parameterType="Transaction">
 		insert into dentbill_transaction
 		(bill_id,reg_date,exp_date,partner_id,patient_name,prosthetic_id,shade,amount,formula_id,memo)

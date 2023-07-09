@@ -1,5 +1,7 @@
 package com.dentbill.transaction.controller;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,14 +34,7 @@ public class transactionController {
 	@Setter(onMethod_ = @Autowired)
 	public TransactionService transactionService;
 
-	//접수명단
-		@GetMapping("/transactionList")
-	    public String transactionList(Model model) {
-			
-	        return "transaction/transactionList";
-	    }
-		
-	//접수등록
+	//접수명단 클릭
 	@GetMapping("/transactionReciept")
     public String transactionReciept(Model model) {
 		
@@ -54,6 +49,23 @@ public class transactionController {
     	}
         return "transaction/transactionReciept";
     }
+	
+	//접수명단 목록
+	@GetMapping("/transactionList")
+    public String transactionList(Model model) {
+		
+		//오늘날짜
+		Date today = new Date();
+		SimpleDateFormat todayFormat = new SimpleDateFormat("yy/MM/dd");
+		String sysdate = todayFormat.format(today);
+		
+		List<TransactionVO> transactinoList = transactionService.transactionList(sysdate);
+    	if(transactinoList != null) {
+    		model.addAttribute("transactinoList",transactinoList);
+    	}
+        return "transaction/transactionList";
+    }
+	
 	
 	//접수등록
 	@PostMapping(value ="/transactinoInsert")
