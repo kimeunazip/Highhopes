@@ -84,6 +84,14 @@
 		                            <span class="hide-menu">거래처관리</span>
 		                        </a>
 		                    </li>
+		                      <li class="sidebar-item">
+		                        <a class="sidebar-link" href="/costManagement" aria-expanded="false">
+					                <span>
+					                  <i class="ti ti-file-description"></i>
+					                </span>
+		                            <span class="hide-menu">경비관리</span>
+		                        </a>
+		                    </li>
 		                </ul>
 		            </nav>
 		            <!-- End Sidebar navigation -->
